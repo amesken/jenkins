@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Jenkins by amesken</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Jenkins</h1>
+        <h2></h2>
+
+        <section id="downloads">
+          <a href="https://github.com/amesken/jenkins/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/amesken/jenkins/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/amesken/jenkins" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="jenkins" class="anchor" href="#jenkins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jenkins</h1>
+
+<p>Run <a href="https://jenkins-ci.org/">Jenkins</a> inside a Docker container.</p>
+
+<h2>
+<a id="volumes" class="anchor" href="#volumes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Volumes</h2>
+
+<p>Jenkins home directory is exported as data volume:</p>
+
+<pre><code>&lt;USER_HOME&gt;/docker/data/jenkins
+</code></pre>
+
+<h2>
+<a id="ports" class="anchor" href="#ports" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ports</h2>
+
+<p>The service is exposed through port <code>8080</code>.</p>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p>To run jenkins do:</p>
+
+<pre><code>docker run -p 18080:8080 amesken/jenkins
+</code></pre>
+
+<p>Now point your browser to <a href="http://192.168.99.100:18080/">http://192.168.99.100:18080/</a></p>
+
+<p>There is no admin user needed.</p>
+
+<h2>
+<a id="jenkins-config-and-jobs" class="anchor" href="#jenkins-config-and-jobs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jenkins config and jobs</h2>
+
+<p>This image will configure jenkins to work with a complete Continuous Delivery tool stack which can be obtained from <a href="https://hub.docker.com/r/amesken/cd-tool-stack/">docker</a> or <a href="https://github.com/amesken/cd-tool-stack">github</a>.
+The jenkins jobs and configuration are based on <a href="https://blog.codecentric.de/en/2015/10/continuous-integration-platform-using-docker-container-jenkins-sonarqube-nexus-gitlab">this blog article</a> by Marcel Birkner.</p>
+      </section>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-70105547-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
