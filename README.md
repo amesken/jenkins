@@ -1,3 +1,5 @@
+[![](https://badge.imagelayers.io/amesken/jenkins:latest.svg)](https://imagelayers.io/?images=amesken/jenkins:latest 'Get your own badge on imagelayers.io')
+
 # Jenkins
 
 Run [Jenkins](https://jenkins-ci.org/) inside a Docker container.
